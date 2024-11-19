@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- compendio -->
+  <body>
+    <table>
+      {% for article in articles %}  <!-- Bucle que recorre los artículos -->
+        <tr>
+          <td>{{ article.title }}</td>  <!-- Muestra el título de cada artículo -->
+          <td>{{ article.content }}</td>  <!-- Muestra el contenido de cada artículo -->
+          <td><a href="{% url 'detail' article.id %}">Detail</a></td>  <!-- Enlace a la vista de detalle -->
+          <td><a href="{% url 'edit' article.id %}">Edit</a></td> <!-- Apéndice -->
+          <td><a href="{% url 'delete' article.id %}">Delete</a></td>
+        </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <a href="{% url 'create' %}">New Blog</a>  <!-- Enlace para crear un nuevo artículo -->
+  </body>
+</html>

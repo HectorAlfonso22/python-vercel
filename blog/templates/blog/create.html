@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Artículo</title>
+</head>
+<body>
+    
+    <h1>Crear un Nuevo Artículo</h1>
+    <form action="{% url 'create' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Crear Artículo">
+    </form>
+    <br>
+    <a href="{% url 'index' %}">Volver a la lista</a>
+    
+</body>
+</html>

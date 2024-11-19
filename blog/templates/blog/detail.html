@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Blog App</title>
+  </head>
+  <body>
+    <p>
+      <strong>Title:</strong>
+      {{ article.title }}  <!-- Muestra el título del artículo -->
+    </p>
+    <p>
+      <strong>Content:</strong>
+      {{ article.content }}  <!-- Muestra el contenido del artículo -->
+    </p>
+    <a href="{% url 'index' %}">Back</a>  <!-- Enlace para regresar a la página de inicio -->
+    <a href="{% url 'edit' article.id %}">Edit</a>  <!-- Apéndice -->  
+  </body>
+</html>
